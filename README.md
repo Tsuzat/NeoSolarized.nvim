@@ -1,5 +1,5 @@
 ## Introduction
-NeoSolarized.nvim is based on [NeoSolarized](https://github.com/overcache/NeoSolarized). The theme is optimised for fully transparency with support of LSP, CMP, GITSIGN and many more plugins.
+NeoSolarized.nvim is based on [NeoSolarized](https://github.com/overcache/NeoSolarized). The theme is optimised for full transparency with support of LSP, CMP, GITSIGN, TREE-SITTER and many more plugins.
 
 ## Installation
 Install this theme using plugin managers
@@ -30,14 +30,16 @@ use ("path-to-NeoSolarized.nvim")
 
 ## Preview
 Default Dark theme
-![default_dark](https://user-images.githubusercontent.com/70003855/182680011-ca4de840-cb99-471c-82d1-f7e1061faeef.png)
-Default Light theme
+![Screenshot_3](https://user-images.githubusercontent.com/70003855/183027428-6a4bf646-b629-4fc9-9429-cb732acb5d68.png)
+Default Light theme (This theme will soon be removed. [Alternative](https://github.com/shaunsingh/solarized.nvim) )
 ![defaukt light](https://user-images.githubusercontent.com/70003855/182680058-4e9780e6-6dcd-4325-9deb-ee71535c67f3.png)
-Recommended transparent dark theme
-![dark](https://user-images.githubusercontent.com/70003855/182680104-e7a17e8d-ae4a-4190-9114-b38ed127bf48.png)
+Transparent theme with iconic LineNr
+![Screenshot3](https://user-images.githubusercontent.com/70003855/183027947-1ae93f4c-f9ad-444e-b616-063e64c4e78a.png)
+**Recommended** transparent dark theme
+![Screenshot__3](https://user-images.githubusercontent.com/70003855/183027991-06d8a1c1-f95e-4535-9d0a-629efddd3d8a.png)
 
 ## Options
-Following options are recommended (refer to 3rd preview picture)
+Following options are recommended (refer to 4th preview picture)
 ```lua
 vim.g.NeoSolarized_italics = 1 -- 0 or 1
 vim.g.NeoSolarized_visibility = 'normal' -- low, normal, high

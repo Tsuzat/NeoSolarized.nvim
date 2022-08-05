@@ -145,7 +145,7 @@ function M.load_syntax(colors)
 	syntax['vimHiLink'] = {fg=colors.blue}
 	syntax['vimHiGroup'] = {fg=colors.blue}
 	syntax['vimGroup'] = {fg=colors.blue,style='bold'}
-	
+
 	-- Git Related
 	syntax['gitcommitComment'] = {fg=colors.base01,style=utils.italics()}
 	syntax['gitcommitUnmerged'] = {fg=colors.green,style='bold'}
@@ -296,20 +296,20 @@ function M.load_syntax(colors)
 	syntax['FloatBorder'] = syntax['VertSplit']
 	syntax['Function'] = {fg=colors.blue,style='italic'}
 	syntax['Include'] = syntax['PreProc']
-	syntax['Keyword'] = syntax['Statement']
-	syntax['Label'] = syntax['Statement']
+	syntax['Keyword'] = {fg=colors.orange}
+    syntax['Label'] = syntax['Statement']
 	syntax['Macro'] = syntax['PreProc']
 	syntax['Number'] = syntax['Constant']
-	syntax['Operator'] = syntax['Statement']
+	syntax['Operator'] = {fg=colors.orange}
 	syntax['PreCondit'] = syntax['PreProc']
 	syntax['QuickFixLine'] = syntax['Search']
-	syntax['Repeat'] = syntax['Statement']
+	syntax['Repeat'] = syntax['Operator']
 	syntax['SpecialChar'] = syntax['Special']
 	syntax['SpecialComment'] = syntax['Special']
 	syntax['StatusLineTerm'] = syntax['StatusLine']
 	syntax['StatusLineTermNC'] = syntax['StatusLineNC']
 	syntax['StorageClass'] = syntax['Type']
-	syntax['String'] = syntax['Constant']
+	syntax['String'] = {fg=colors.green, style='italic'}
 	syntax['Structure'] = syntax['Type']
 	syntax['Tag'] = syntax['Special']
 	syntax['Typedef'] = syntax['Type']
@@ -364,8 +364,8 @@ function M.load_syntax(colors)
 	syntax['TSInclude'] = syntax['Include']
 	syntax['TSKeyword'] = syntax['Keyword']
 	syntax['TSLabel'] = syntax['Label']
-	syntax['TSMethod'] = syntax['Function']
-	syntax['TSNamespace'] = syntax['Identifier']
+	syntax['TSMethod'] = {fg=colors.cyan,style='italic'}
+    syntax['TSNamespace'] = syntax['Identifier']
 	syntax['TSNumber'] = syntax['Constant']
 	syntax['TSOperator'] = syntax['Operator']
 	syntax['TSParameterReference'] = syntax['Identifier']
@@ -374,11 +374,11 @@ function M.load_syntax(colors)
 	syntax['TSPunctBracket'] = syntax['Delimiter']
 	syntax['TSPunctSpecial'] = syntax['Special']
 	syntax['TSRepeat'] = syntax['Repeat']
-	syntax['TSString'] = syntax['Constant']
-	syntax['TSStringRegex'] = syntax['Constant']
-	syntax['TSStringEscape'] = syntax['Constant']
+	syntax['TSString'] = syntax['String']
+	syntax['TSStringRegex'] = syntax['String']
+	syntax['TSStringEscape'] = syntax['String']
 	syntax['TSStrong'] = {fg=colors.base1,bg=colors.base03,style='bold',cterm='none'}
-	syntax['TSConstructor'] = syntax['Function']
+	syntax['TSConstructor'] = {fg=colors.cyan,style='italic'}
 	syntax['TSKeywordFunction'] = syntax['Identifier']
 	syntax['TSLiteral'] = syntax['Normal']
 	syntax['TSParameter'] = syntax['Identifier']

@@ -19,22 +19,22 @@ g.colors_name = 'NeoSolarized'
 function M.load_syntax(colors)
   local syntax = {}
   syntax['Normal'] = { fg = colors.base0, bg = utils.termtrans(colors.base03) }
-  syntax['CursorLine'] = { fg = colors.none, bg = colors.base02 }
+  syntax['CursorLine'] = { fg = colors.none, bg = colors.base03 }
   syntax['Terminal'] = syntax['Normal']
   syntax['ToolbarButton'] = { fg = colors.base1, bg = utils.termtrans(colors.base02), style = 'bold' }
   syntax['ToolbarLine'] = { fg = colors.none, bg = utils.termtrans(colors.base02) }
 
-  if g.solarized_visibility == 'high' then
+  if g.NeoSolarized_visibility == 'high' then
     syntax['CursorLineNr'] = { fg = colors.orange, style = 'bold' }
-    syntax['NonText'] = { fg = colors.orange, style = 'bold' }
+    syntax['NonText'] = { fg = colors.base00, style = 'bold' }
     syntax['SpecialKey'] = { fg = colors.orange, style = 'reverse' }
     syntax['SpellBad'] = { fg = colors.violet, bg = colors.base2, guisp = colors.red, style = 'reverse,underline' }
     syntax['SpellCap'] = { fg = colors.violet, bg = colors.base2, guisp = colors.red, style = 'reverse,underline' }
     syntax['SpellLocal'] = { fg = colors.yellow, bg = colors.base2, guisp = colors.red, style = 'reverse,underline' }
     syntax['SpellRare'] = { fg = colors.cyan, bg = colors.base2, guisp = colors.red, style = 'reverse,underline' }
     syntax['Title'] = { fg = colors.yellow, style = 'bold', cterm = 'bold' }
-  elseif g.solarized_visibility == 'low' then
-    syntax['CursorLineNr'] = { fg = colors.base01, style = 'bold' }
+  elseif g.NeoSolarized_visibility == 'low' then
+    syntax['CursorLineNr'] = { fg = colors.base02, style = 'bold' }
     syntax['NonText'] = { fg = colors.base02, style = 'italic' }
     syntax['SpecialKey'] = { fg = colors.base02, style = 'reverse' }
     syntax['SpellBad'] = { fg = colors.violet, guisp = colors.violet, style = 'underline' }
@@ -53,12 +53,12 @@ function M.load_syntax(colors)
     syntax['Title'] = { fg = colors.orange, style = 'bold', cterm = 'bold' }
   end
 
-  if g.solarized_diffmode == 'high' then
+  if g.NeoSolarized_diffmode == 'high' then
     syntax['DiffAdd'] = { fg = colors.green, bg = colors.none, style = 'bold' }
     syntax['DiffChange'] = { fg = colors.yellow, bg = colors.none, style = 'bold' }
     syntax['DiffDelete'] = { fg = colors.red, bg = colors.none, style = 'bold' }
     syntax['DiffText'] = { fg = colors.blue, bg = colors.none, style = 'bold' }
-  elseif g.solarized_diffmode == 'low' then
+  elseif g.NeoSolarized_diffmode == 'low' then
     syntax['DiffAdd'] = { fg = colors.green, guisp = colors.green }
     syntax['DiffChange'] = { fg = colors.yellow, guisp = colors.yellow }
     syntax['DiffDelete'] = { fg = colors.red, style = 'bold' }
@@ -70,12 +70,12 @@ function M.load_syntax(colors)
     syntax['DiffText'] = { fg = colors.blue, guisp = colors.blue }
   end
 
-  if g.solarized_statusline == 'low' then
+  if g.NeoSolarized_statusline == 'low' then
     syntax['StatusLine'] = { fg = colors.base02, bg = colors.base1, style = 'bold,reverse' }
     syntax['StatusLineNC'] = { fg = colors.base02, bg = colors.base01, style = 'reverse' }
     syntax['TabLineSel'] = { fg = colors.base1, bg = colors.base02 }
     syntax['NormalMode'] = { fg = colors.base02, bg = colors.base1, style = 'bold,reverse' }
-  elseif g.solarized_statusline == 'flat' then
+  elseif g.NeoSolarized_statusline == 'flat' then
     syntax['StatusLine'] = { fg = colors.base02, bg = colors.base2, style = 'reverse' }
     syntax['StatusLineNC'] = { fg = colors.base02, bg = colors.base1, style = 'reverse' }
     syntax['TabLineSel'] = { fg = colors.base2, bg = colors.base02 }

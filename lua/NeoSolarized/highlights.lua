@@ -395,12 +395,12 @@ function M.load_syntax(colors)
   syntax['DiagnosticWarn'] = { fg = colors.yellow, guisp = colors.yellow, style = 'none' }
   syntax['DiagnosticInfo'] = { fg = colors.cyan, guisp = colors.cyan, style = 'none' }
   syntax['DiagnosticHint'] = { fg = colors.green, guisp = colors.green, style = 'none' }
-  syntax['DiagnosticUnderlineError'] = { fg = colors.none, guisp = colors.red, style = 'underline' }
-  syntax['DiagnosticUnderlineWarn'] = { fg = colors.none, guisp = colors.yellow, style = 'underline' }
-  syntax['DiagnosticUnderlineInfo'] = { fg = colors.none, guisp = colors.cyan, style = 'underline' }
-  syntax['DiagnosticUnderlineHint'] = { fg = colors.none, guisp = colors.green, style = 'underline' }
+  syntax['DiagnosticUnderlineError'] = { fg = colors.none, guisp = colors.red, style = 'undercurl' }
+  syntax['DiagnosticUnderlineWarn'] = { fg = colors.none, guisp = colors.yellow, style = 'undercurl' }
+  syntax['DiagnosticUnderlineInfo'] = { fg = colors.none, guisp = colors.cyan, style = 'undercurl' }
+  syntax['DiagnosticUnderlineHint'] = { fg = colors.none, guisp = colors.green, style = 'undercurl' }
 
-  syntax['LspReferenceRead'] = { fg = colors.none, style = 'underline' }
+  syntax['LspReferenceRead'] = { fg = colors.none, style = 'undercurl' }
   syntax['LspReferenceText'] = syntax['LspReferenceRead']
   syntax['LspReferenceWrite'] = { fg = colors.none, style = 'underline,bold' }
 

@@ -5,7 +5,7 @@ local defaults = {
   transparent = true, -- Enable this to disable setting the background color
   lineNr = true, -- transparent LineNr, put false to make it visible
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  enable_italics = true, -- Italics for different hightlight groups (like Define, Include, Conditional, etc.)
+  enable_italics = true, -- Italics for different hightlight groups
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -22,7 +22,7 @@ local defaults = {
   sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
   dim_inactive = false, -- dims inactive windows
   lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
-  use_background = true, -- can be light/dark/auto. When auto, background will be set to vim.o.background
+  use_background = false, -- can be light/dark/auto. When auto, background will be set to vim.o.background
 }
 
 M.options = {}

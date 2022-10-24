@@ -1,1 +1,1 @@
-require("NeoSolarized").load()
+require("NeoSolarized")._load()

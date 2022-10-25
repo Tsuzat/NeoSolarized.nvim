@@ -112,25 +112,44 @@ require('lualine').setup {
 The theme comes in two styles, `light` and `dark`.
 
 NeoSolarized will use the default options, unless you call `setup`.
+Here an example to set things up using default options.
 
 ```lua
-require("NeoSolarized.config").setup({
+local ok_status, NeoSolarized = pcall(require, "NeoSolarized")
+
+if not ok_status then
+  return
+end
+
+-- Default Setting for NeoSolarized
+
+NeoSolarized.setup {
   style = "dark", -- "dark" or "light"
   transparent = true, -- true/false
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   enable_italics = true, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
   styles = {
-    -- Style to be applied to different syntax groups
-    comments = { italic = true }, -- Specify style for comments
-    keywords = { italic = true }, -- Specify style for keywords
-    functions = { bold = true }, -- Specify style for functions
-    variables = {}, -- Specify style for variables
-    string = { italic = true }, -- Specify style for string
-    underline = true, -- true/false; use undercurl globally
-    undercurl = true, -- true/false; use underline globally
+    -- Style for different style groups
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = { bold = true },
+    variables = {},
+    string = { italic = true },
+    underline = true, -- true/false; for global underline
+    undercurl = true, -- true/false; for global undercurl
   },
-})
+}
+-- Set colorscheme to NeoSolarized
+vim.cmd [[
+   try
+        colorscheme NeoSolarized
+    catch /^Vim\%((\a\+)\)\=:E18o
+        colorscheme default
+        set background=dark
+    endtry
+]]
 ```
+> **NOTE** that you can not use transparency with `light` mode.
 
 ## ❣️ Extras
 
@@ -151,6 +170,7 @@ Nothing is perfect. Every project needs improvements. I'll be improving this plu
   - Optimization of highlight groups
 
 ## 🏅 Inspiration
+
   - Plugin Structure is heavily inspired from [Tokyonight](https://github.com/folke/tokyonight.nvim)
   - Classic color palettes from [NeoSolarized](https://github.com/overcache/NeoSolarized)
   - Love for Full Transparent NeoVim themes.

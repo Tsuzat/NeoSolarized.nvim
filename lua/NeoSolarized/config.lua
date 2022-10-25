@@ -3,12 +3,10 @@ local M = {}
 local defaults = {
   style = "dark", -- "dark" or "light"
   transparent = true, -- Enable this to disable setting the background color
-  lineNr = true, -- transparent LineNr, put false to make it visible
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   enable_italics = true, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
   styles = {
     -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
     comments = { italic = true },
     keywords = { italic = true },
     functions = { bold = true },

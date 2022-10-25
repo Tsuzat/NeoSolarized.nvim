@@ -41,6 +41,7 @@ extra themes for Kitty, Alacritty and Konsole.
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [Mini](https://github.com/echasnovski/mini.nvim)
 - [Neogit](https://github.com/TimUntersberger/neogit)
+- [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [Scrollbar](https://github.com/petertriho/nvim-scrollbar)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)

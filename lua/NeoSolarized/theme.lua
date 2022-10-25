@@ -4,7 +4,6 @@ local M = {}
 function M.setup()
   local config = require("NeoSolarized.config")
   local options = config.options
-  print(options.transparent)
   local theme = {
     config = options,
     colors = colors.setup(),
@@ -14,67 +13,70 @@ function M.setup()
 
   theme.highlights = {
 
-    Foo          = { bg = c.purple, fg = c.purple },
-    Comment      = { fg = c.fg2, style = options.styles.comments }, -- any comment
     ColorColumn  = { bg = c.blue }, -- used for the columns set with 'colorcolumn'
+    Comment      = { fg = c.fg2, style = options.styles.comments }, -- any comment
     Conceal      = { fg = c.bg1 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor       = { fg = c.bg_current_word, bg = c.fg0 }, -- character under the cursor
-    lCursor      = { fg = c.bg0, bg = c.fg0 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM     = { fg = c.bg0, bg = c.fg0 }, -- like Cursor, but used when in IME mode |CursorIM|
+    CurSearch    = { link = "IncSearch" },
+    CurrentWord  = { fg = c.bg0, bg = c.bg_green },
+    Cursor       = { fg = c.bg1, bg = c.fg0 }, -- character under the cursor
     CursorColumn = { bg = c.none }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine   = { bg = c.bg_current_word }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    Directory    = { fg = c.blue }, -- directory names (and other special names in listings)
+    CursorIM     = { fg = c.bg0, bg = c.fg0 }, -- like Cursor, but used when in IME mode |CursorIM|
+    CursorLine   = { bg = options.transparent and c.bg0 or c.bg1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorLineNr = { fg = c.base2 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     DiffAdd      = { bg = c.green }, -- diff mode: Added line |diff.txt|
     DiffChange   = { bg = c.voilet }, -- diff mode: Changed line |diff.txt|
     DiffDelete   = { bg = c.red }, -- diff mode: Deleted line |diff.txt|
     DiffText     = { bg = c.bg1 }, -- diff mode: Changed text within a changed line |diff.txt|
+    Directory    = { fg = c.blue }, -- directory names (and other special names in listings)
     EndOfBuffer  = { fg = c.bg1 }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg     = { fg = c.red }, -- error messages on the command line
-    VertSplit    = { fg = c.base1 }, -- the column separating vertically split windows
-    WinSeparator = { fg = c.base2, bold = true }, -- the column separating vertically split windows
-    Folded       = { fg = c.blue, bg = c.bg1 }, -- line used for closed folds
+    ErrorText    = { sp = c.red, undercurl = options.styles.undercurl },
+    FloatBorder  = { fg = c.base1, bg = options.transparent and c.none or c.bg1 },
     FoldColumn   = { bg = options.transparent and c.none or c.bg0, fg = c.bg1 }, -- 'foldcolumn'
-    SignColumn   = { bg = options.transparent and c.none or c.bg0, fg = c.bg1 }, -- column where |signs| are displayed
-    SignColumnSB = { bg = c.bg0, fg = c.bg1 }, -- column where |signs| are displayed
-    Substitute   = { bg = c.red, fg = c.bg0 }, -- |:substitute| replacement text highlighting
-    LineNr       = { bg = options.lineNr and c.none or c.bg1, fg = c.fg1 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.base2 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    Folded       = { fg = c.blue, bg = c.bg1 }, -- line used for closed folds
+    Foo          = { bg = c.purple, fg = c.purple },
+    HintText     = { sp = c.green, undercurl = false }, -- FIXME : Showing weird undercurl
+    IncSearch    = { bg = c.orange, fg = c.bg0 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c" InfoText     = { sp = c.blue, undercurl = options.styles.undercurl },
+    LineNr       = { bg = options.transparent and c.none or c.bg1, fg = c.fg1 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     MatchParen   = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg      = { fg = c.fg2, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea      = { fg = c.fg2 }, -- Area for messages and cmdline
     MoreMsg      = { fg = c.blue }, -- |more-prompt|
+    MsgArea      = { fg = c.base2 }, -- Area for messages and cmdline
     NonText      = { fg = c.fg2 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal       = { fg = c.fg0, bg = options.transparent and c.none or c.bg0 }, -- normal text
+    NormalFloat  = { fg = c.fg0, bg = options.transparent and c.none or c.bg1 }, -- Normal text in floating windows.
     NormalNC     = { fg = c.fg0, bg = options.transparent and c.none or c.bg0 }, -- normal text in non-current windows
     NormalSB     = { fg = c.fg0, bg = c.bg0 }, -- normal text in sidebar
-    NormalFloat  = { fg = c.fg0, bg = options.transparent and c.none or c.bg1 }, -- Normal text in floating windows.
-    FloatBorder  = { fg = c.base1, bg = options.transparent and c.none or c.bg1 },
     Pmenu        = { bg = options.transparent and c.none or c.bg1, fg = c.fg0 }, -- Popup menu: normal item.
-    PmenuSel     = { bg = c.fg2, fg = c.base3 }, -- Popup menu: selected item.
     PmenuSbar    = { bg = options.transparent and c.none or c.bg1 }, -- Popup menu: scrollbar.
+    PmenuSel     = { bg = c.fg2, fg = c.base3 }, -- Popup menu: selected item.
     PmenuThumb   = { bg = c.base1 }, -- Popup menu: Thumb of the scrollbar.
     Question     = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = c.aqua, bold = true, undercurl = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    QuickFixLine = { bg = c.aqua, bold = true, undercurl = options.styles.undercurl }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search       = { bg = c.bg_green, fg = c.bg0 }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch    = { bg = c.orange, fg = c.bg0 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    CurSearch    = { link = "IncSearch" },
+    SignColumn   = { bg = options.transparent and c.none or c.bg0 }, -- column where |signs| are displayed
+    SignColumnSB = { bg = c.bg0, fg = c.bg1 }, -- column where |signs| are displayed
     SpecialKey   = { fg = c.fg2 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-    SpellBad     = { sp = c.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    SpellCap     = { sp = c.blue, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal   = { sp = c.purple, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    SpellRare    = { sp = c.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+    SpellBad     = { sp = c.red, undercurl = options.styles.undercurl }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap     = { sp = c.blue, undercurl = options.styles.undercurl }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal   = { sp = c.purple, undercurl = options.styles.undercurl }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare    = { sp = c.green, undercurl = options.styles.undercurl }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine   = { fg = c.fg0, bg = options.transparent and c.none or c.bg0 }, -- status line of current window
     StatusLineNC = { fg = c.fg2, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    Substitute   = { bg = c.red, fg = c.bg0 }, -- |:substitute| replacement text highlighting
     TabLine      = { bg = c.bg_statusline1, fg = c.fg2 }, -- tab pages line, not active tab page label
     TabLineFill  = { bg = c.bg0 }, -- tab pages line, where there are no labels
     TabLineSel   = { fg = c.bg0, bg = c.blue }, -- tab pages line, active tab page label
     Title        = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-    Visual       = { bg = c.bg1 }, -- Visual mode selection
+    VertSplit    = { fg = options.transparent and c.bg0 or c.base1 }, -- the column separating vertically split windows
+    Visual       = { bg = config.is_day() and c.base1 or c.bg1, fg = config.is_day() and c.fg0 or c.none }, -- Visual mode selection
     VisualNOS    = { bg = c.bg1 }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg   = { fg = c.red }, -- warning messages
+    WarningText  = { sp = c.yellow, undercurl = options.styles.undercurl },
     Whitespace   = { fg = c.fg2 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu     = { bg = c.bg1 }, -- current match in 'wildmenu' completion
-    CurrentWord  = { fg = c.bg0, bg = c.bg_green },
+    WinSeparator = { fg = c.base2, bold = true }, -- the column separating vertically split windows
+    lCursor      = { fg = c.bg0, bg = c.fg0 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 
     -- These groups are not listed as default vim groups,
     -- but they are defacto standard group names for syntax highlighting.
@@ -83,7 +85,7 @@ function M.setup()
     -- Uncomment and edit if you want more specific syntax highlighting.
 
     Constant       = { fg = c.aqua }, -- (preferred) any constant
-    String         = { fg = c.green, style = options.style.string }, --   a string constant: "this is a string"
+    String         = { fg = c.green, style = options.styles.string }, --   a string constant: "this is a string"
     Character      = { fg = c.green }, --  a character constant: 'c', '\n'
     Number         = { fg = c.purple }, --   a number constant: 234, 0xff
     Boolean        = { fg = c.purple }, --  a boolean constant: TRUE, false
@@ -185,7 +187,7 @@ function M.setup()
     WarningFloat               = { fg = c.yellow, bg = options.transparent and c.none or c.bg1 },
     InfoFloat                  = { fg = c.blue, bg = options.transparent and c.none or c.bg1 },
     HintFloat                  = { fg = c.green, bg = options.transparent and c.none or c.bg1 },
-    WinBarNC                   = { fg = c.base1 },
+    --[[ WinBarNC                   = { fg = c.base1 }, ]]
     DiagnosticFloatingError    = { link = "ErrorFloat" },
     DiagnosticFloatingWarn     = { link = "WarningFloat" },
     DiagnosticFloatingInfo     = { link = "InfoFloat" },
@@ -596,10 +598,10 @@ function M.setup()
     NavicSeparator          = { fg = c.fg0 },
 
     -- navic
-    IndentBlanklineContextChar        = { fg = c.base1 },
-    IndentBlanklineChar               = { link = "LineNr" },
-    IndentBlanklineSpaceChar          = { link = "LineNr" },
-    IndentBlanklineSpaceCharBlankline = { link = "LineNr" },
+    IndentBlanklineContextChar = { fg = c.base1 },
+    --[[ IndentBlanklineChar               = { link = "LineNr" }, ]]
+    --[[ IndentBlanklineSpaceChar          = { link = "LineNr" }, ]]
+    --[[ IndentBlanklineSpaceCharBlankline = { link = "LineNr" }, ]]
 
     -- Scrollbar
     ScrollbarHandle       = { fg = c.none, bg = c.bg1 },

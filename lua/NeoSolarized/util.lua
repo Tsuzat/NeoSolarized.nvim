@@ -59,4 +59,3 @@ function M.load(theme)
 end
 
 return M
-

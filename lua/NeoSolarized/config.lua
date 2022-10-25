@@ -5,7 +5,7 @@ local defaults = {
   transparent = true, -- Enable this to disable setting the background color
   lineNr = true, -- transparent LineNr, put false to make it visible
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  enable_italics = true, -- Italics for different hightlight groups
+  enable_italics = true, -- Italics for different hightlight groups (eg. Statement, Condition, Comment, Include, etc.)
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
@@ -13,22 +13,21 @@ local defaults = {
     keywords = { italic = true },
     functions = { bold = true },
     variables = {},
-    underline = { undercurl = true },
     string = { italic = true },
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark", -- style for sidebars, see below
-    floats = "dark", -- style for floating windows
+    underline = true,
+    undercurl = true,
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-  dim_inactive = false, -- dims inactive windows
-  lualine_bold = true, -- When `true`, section headers in the lualine theme will be bold
-  use_background = false, -- can be light/dark/auto. When auto, background will be set to vim.o.background
 }
 
 M.options = {}
 
 function M.setup(options)
   M.options = vim.tbl_deep_extend("force", {}, defaults, options or {})
+  if M.options.transparent and M.options.style == "light" then
+    print("NeoSolarized does not support transparent mode in Light theme. Switching Back to dark theme with transparent mode.")
+    M.options.style = "dark"
+    M.options.transparent = true
+  end
 end
 
 function M.extend(options)
@@ -36,7 +35,7 @@ function M.extend(options)
 end
 
 function M.is_day()
-  return M.options.style == "light" or M.options.use_background and vim.o.background == "light"
+  return M.options.style == "light" and M.options.transparent == false or vim.o.background == "light"
 end
 
 M.setup()

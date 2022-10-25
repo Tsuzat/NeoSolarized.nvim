@@ -40,8 +40,8 @@ M.light = {
   fg1       = '#839496',
   fg2       = '#657b83',
   base1     = '#93a1a1',
-  base2     = '#eee8d5',
-  base3     = '#fdf6e3',
+  base2     = '#002b36',
+  base3     = '#073642',
   red       = '#dc322f',
   orange    = '#cb4b16',
   yellow    = '#b58900',
@@ -62,7 +62,6 @@ function M.setup(opts)
 
   local palette = M.dark
   if config.is_day() then
-    print("Light Theme is Choosen")
     palette = M.light
   end
   if type(palette) == "function" then

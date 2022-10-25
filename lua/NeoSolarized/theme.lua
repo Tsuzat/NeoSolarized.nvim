@@ -75,7 +75,7 @@ function M.setup()
     WarningText  = { sp = c.yellow, undercurl = options.styles.undercurl },
     Whitespace   = { fg = c.fg2 }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu     = { bg = c.bg1 }, -- current match in 'wildmenu' completion
-    WinSeparator = { fg = c.base2, bold = true }, -- the column separating vertically split windows
+    WinSeparator = { fg = options.transparent and c.bg0 or c.bg1, bold = true }, -- the column separating vertically split windows
     lCursor      = { fg = c.bg0, bg = c.fg0 }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
 
     -- These groups are not listed as default vim groups,

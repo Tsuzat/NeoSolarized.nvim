@@ -150,3 +150,7 @@ Nothing is perfect. Every project needs improvements. I'll be improving this plu
   - Terminal Color Support
   - Optimization of highlight groups
 
+## 🏅 Inspiration
+  - Plugin Structure is heavily inspired from [Tokyonight](https://github.com/folke/tokyonight.nvim)
+  - Classic color palettes from [NeoSolarized](https://github.com/overcache/NeoSolarized)
+  - Love for Full Transparent NeoVim themes.

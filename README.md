@@ -114,7 +114,7 @@ The theme comes in two styles, `light` and `dark`.
 NeoSolarized will use the default options, unless you call `setup`.
 
 ```lua
-require("tokyonight").setup({
+require("NeoSolarized.config").setup({
   style = "dark", -- "dark" or "light"
   transparent = true, -- true/false
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim

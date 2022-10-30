@@ -23,9 +23,9 @@ function M.setup()
     CursorIM     = { fg = c.bg0, bg = c.fg0 }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorLine   = { bg = options.transparent and c.bg0 or c.bg1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr = { fg = c.base2 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    DiffAdd      = { bg = c.green }, -- diff mode: Added line |diff.txt|
-    DiffChange   = { bg = c.voilet }, -- diff mode: Changed line |diff.txt|
-    DiffDelete   = { bg = c.red }, -- diff mode: Deleted line |diff.txt|
+    DiffAdd      = { bg = c.diff_add }, -- diff mode: Added line |diff.txt|
+    DiffChange   = { bg = c.diff_yellow }, -- diff mode: Changed line |diff.txt|
+    DiffDelete   = { bg = c.diff_delete }, -- diff mode: Deleted line |diff.txt|
     DiffText     = { bg = c.bg1 }, -- diff mode: Changed text within a changed line |diff.txt|
     Directory    = { fg = c.blue }, -- directory names (and other special names in listings)
     EndOfBuffer  = { fg = c.bg1 }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.

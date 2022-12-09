@@ -15,6 +15,7 @@ local defaults = {
     underline = true,
     undercurl = true,
   },
+  on_highlights = function(highlights, colors) end, -- Add specific hightlight groups
 }
 
 M.options = {}

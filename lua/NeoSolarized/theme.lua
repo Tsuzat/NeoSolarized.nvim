@@ -501,15 +501,15 @@ function M.setup()
 
     LightspeedGreyWash               = { fg = c.base2 },
     LightspeedCursor                 = { link = "Cursor" },
-    LightspeedLabel                  = { fg = c.voilet, bold = true, underline = true },
-    LightspeedLabelDistant           = { fg = c.green, bold = true, underline = true },
+    LightspeedLabel                  = { fg = c.red, bg = c.none, bold = true, underline = true },
+    LightspeedLabelDistant           = { fg = c.blue, bg = c.none, bold = true, underline = true },
     LightspeedLabelDistantOverlapped = { fg = c.bg_green, underline = true },
     LightspeedLabelOverlapped        = { fg = c.voilet, underline = true },
-    LightspeedMaskedChar             = { fg = c.orange },
+    LightspeedMaskedChar             = { fg = c.purple },
     LightspeedOneCharMatch           = { bg = c.purple, fg = c.fg0, bold = true },
-    LightspeedPendingOpArea          = { bg = c.purple, fg = c.fg0 },
-    LightspeedShortcut               = { bg = c.voilet, fg = c.fg0, bold = true, underline = true },
-    LightspeedUnlabeledMatch         = { fg = c.aqua, bold = true },
+    LightspeedPendingOpArea          = { bg = c.green, fg = c.bg0 },
+    LightspeedShortcut               = { bg = c.red, fg = c.fg0, bold = true },
+    LightspeedUnlabeledMatch         = { fg = c.fg0, bg = c.none, bold = true },
 
     -- Cmp
     CmpDocumentation         = { fg = c.fg0, bg = options.transparent and c.none or c.bg1 },

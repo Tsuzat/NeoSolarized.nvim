@@ -35,7 +35,7 @@ function M.setup()
     FoldColumn   = { bg = options.transparent and c.none or c.bg0, fg = c.bg1 }, -- 'foldcolumn'
     Folded       = { fg = c.blue, bg = c.bg1 }, -- line used for closed folds
     Foo          = { bg = c.purple, fg = c.purple },
-    HintText     = { sp = c.green, undercurl = false }, -- FIXME : Showing weird undercurl
+    HintText     = { sp = c.green, undercurl = false },
     IncSearch    = { bg = c.orange, fg = c.bg0 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c" InfoText     = { sp = c.blue, undercurl = options.styles.undercurl },
     LineNr       = { bg = options.transparent and c.none or c.bg1, fg = c.fg1 }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     MatchParen   = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -62,9 +62,9 @@ function M.setup()
     SpellLocal   = { sp = c.purple, undercurl = options.styles.undercurl }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare    = { sp = c.green, undercurl = options.styles.undercurl }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine   = { fg = c.fg0, bg = options.transparent and c.none or c.bg0 }, -- status line of current window
-    StatusLineNC = { fg = c.fg2, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLineNC = { fg = c.fg2 }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     Substitute   = { bg = c.red, fg = c.bg0 }, -- |:substitute| replacement text highlighting
-    TabLine      = { bg = c.bg_statusline1, fg = c.fg2 }, -- tab pages line, not active tab page label
+    TabLine      = { fg = c.fg2 }, -- tab pages line, not active tab page label
     TabLineFill  = { bg = c.bg0 }, -- tab pages line, where there are no labels
     TabLineSel   = { fg = c.bg0, bg = c.blue }, -- tab pages line, active tab page label
     Title        = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
@@ -91,7 +91,7 @@ function M.setup()
     Boolean        = { fg = c.purple }, --  a boolean constant: TRUE, false
     Float          = { fg = c.purple }, --    a floating point constant: 2.3e10
     Identifier     = { fg = c.blue, style = options.styles.variables }, -- (preferred) any variable name
-    Function       = { fg = c.green, style = options.styles.functions }, -- function name (also: methods for classes)
+    Function       = { fg = c.yellow, style = options.styles.functions }, -- function name (also: methods for classes)
     Statement      = { fg = c.red, italic = options.enable_italics }, -- (preferred) any statement
     Conditional    = { fg = c.red, italic = options.enable_italics }, --  if, then, else, endif, switch, etc.
     Repeat         = { fg = c.red, italic = options.enable_italics }, --   for, do, while, etc.
@@ -101,7 +101,7 @@ function M.setup()
     Exception      = { fg = c.red, italic = options.enable_italics }, --  try, catch, throw
     PreProc        = { fg = c.purple, italic = options.enable_italics }, -- (preferred) generic Preprocessor
     PreCondit      = { fg = c.purple, italic = options.enable_italics },
-    Include        = { fg = c.purple, italic = options.enable_italics }, --  preprocessor #include
+    Include        = { fg = c.red, italic = options.enable_italics }, --  preprocessor #include
     Define         = { fg = c.purple, italic = options.enable_italics }, --   preprocessor #define
     Macro          = { fg = c.aqua }, --    same as Define
     Type           = { fg = c.yellow }, -- (preferred) int, long, char, etc.
@@ -578,10 +578,10 @@ function M.setup()
     NavicSeparator          = { fg = c.fg0 },
 
     -- navic
-    IndentBlanklineContextChar = { fg = c.base1 },
-    --[[ IndentBlanklineChar               = { link = "LineNr" }, ]]
-    --[[ IndentBlanklineSpaceChar          = { link = "LineNr" }, ]]
-    --[[ IndentBlanklineSpaceCharBlankline = { link = "LineNr" }, ]]
+    IndentBlanklineContextChar        = { fg = c.base1, bg = c.none },
+    IndentBlanklineChar               = { fg = c.fg1, bg = c.none },
+    IndentBlanklineSpaceChar          = { fg = c.fg1, bg = c.none },
+    IndentBlanklineSpaceCharBlankline = { fg = c.fg1, bg = c.none },
 
     -- Scrollbar
     ScrollbarHandle       = { fg = c.none, bg = c.bg1 },

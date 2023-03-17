@@ -21,10 +21,11 @@ extra themes for Kitty, Alacritty and Konsole.
 - supports the latest Neovim 5.0 features like TreeSitter and LSP
 - better syntax highlighting
 - color configs for
-  [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include),
-  [Alacritty](https://github.com/alacritty/alacritty) and
-  [Konsole](https://konsole.kde.org/)
-- **lualine** theme
+  [`Kitty`](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include),
+  [`Alacritty`](https://github.com/alacritty/alacritty), 
+  [`Konsole`](https://konsole.kde.org/) and
+  [`Wezterm`](https://github.com/wez/wezterm)
+- **`lualine`** theme
 
 ### 🧨 Plugin Support
 
@@ -57,13 +58,13 @@ extra themes for Kitty, Alacritty and Konsole.
 
 Install the theme with your preferred package manager:
 
-[vim-plug](https://github.com/junegunn/vim-plug)
+#### [`vim-plug`](https://github.com/junegunn/vim-plug)
 
 ```vim
 Plug 'Tsuzat/NeoSolarized.nvim', { 'branch': 'master' }
 ```
 
-[packer](https://github.com/wbthomason/packer.nvim)
+#### [`packer`](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use ('Tsuzat/NeoSolarized.nvim')
@@ -77,6 +78,18 @@ $ git clone https://github.com/Tsuzat/NeoSolarized.nvim
 Install using packer
 ```lua
 use ('path-to-NeoSolarized')
+```
+#### [`lazy.nvim`](https://github.com/folke/lazy.nvim)
+
+```lua
+{
+  "Tsuzat/NeoSolarized.nvim",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      vim.cmd [[ colorscheme NeoSolarized ]]
+    end
+}
 ```
 
 ## ✨ Usage
@@ -158,21 +171,13 @@ vim.cmd [[
 
 ## ❣️ Extras
 
-Extra color configs for **Kitty**, **Alacritty** and **Konsole**
+Extra color configs for **Kitty**, **Alacritty**, **Wezterm** and **Konsole**
 can be found in [extras](extras/). To use them, refer to
 their respective documentation.
 
 ## 💥 Contributing
 
 Pull requests are welcome. One can add plugin and language specific highlight groups.
-
-## 🌟 Future Updates
-
-Nothing is perfect. Every project needs improvements. I'll be improving this plugin. Future updates could have following improvements,
-
-  - Language Specific Settings
-  - Terminal Color Support
-  - Optimization of highlight groups
 
 ## 🏅 Inspiration
 

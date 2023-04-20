@@ -5,16 +5,13 @@ A dark and light Neovim theme written in Lua ported from
 extra themes for Kitty, Alacritty and Konsole.
 
 ## Dark (Dark Theme with Transparency)
-![Screenshot_3](https://user-images.githubusercontent.com/70003855/197702159-2ca089e9-38d3-47dd-8069-58271e738a3d.png)
+![Screenshot_1](https://user-images.githubusercontent.com/70003855/233414724-d2c4d2ad-8bd4-425a-84b1-d9544d90918c.png)
 
 ## Dark
-![Screenshot_1](https://user-images.githubusercontent.com/70003855/197702118-4433e6ff-63d8-491a-a65a-1b43758d8504.png)
-
+![Screenshot_2](https://user-images.githubusercontent.com/70003855/233414803-3bbdda3c-9070-4fa3-828e-0bc8e4f95fbd.png)
 
 ## Light
-![Screenshot_2](https://user-images.githubusercontent.com/70003855/197702095-2c81f5f4-c0c2-48dd-8777-e832a8c7e845.png)
-
-
+![Screenshot_3](https://user-images.githubusercontent.com/70003855/233414961-ad7c275e-ae42-4499-ba99-aaa0a74d81aa.png)
 
 ## 🔥 Features
 

@@ -5,9 +5,6 @@ M.dark = {
   bg0         = '#002b36',
   bg1         = '#073642',
   bg2         = '#002b36',
-  bg3         = '#002b36',
-  bg4         = '#002b36',
-  bg5         = '#002b36',
   fg0         = '#839496',
   fg1         = '#657b83',
   fg2         = '#586e75',
@@ -25,9 +22,9 @@ M.dark = {
   bg_red      = '#da0000',
   bg_green    = '#859000',
   bg_yellow   = '#b59900',
-  diff_add    = '#99ff99',
-  diff_change = '#ffff99',
-  diff_delete = '#ff9999',
+  diff_add    = '#003200',
+  diff_change = '#323200',
+  diff_delete = '#320000',
   none        = "NONE"
 }
 
@@ -36,9 +33,6 @@ M.light = {
   bg0         = '#fdf6e3',
   bg1         = '#eee8d5',
   bg2         = '#fdf6e3',
-  bg3         = '#fdf6e3',
-  bg4         = '#fdf6e3',
-  bg5         = '#fdf6e3',
   fg0         = '#002b36',
   fg1         = '#839496',
   fg2         = '#657b83',
@@ -56,9 +50,9 @@ M.light = {
   bg_red      = '#da0000',
   bg_green    = '#859000',
   bg_yellow   = '#b59900',
-  diff_add    = '#99ff99',
-  diff_change = '#ffff99',
-  diff_delete = '#ff9999',
+  diff_add    = '#003200',
+  diff_change = '#323200',
+  diff_delete = '#320000',
   none        = "NONE"
 }
 

@@ -1,0 +1,27 @@
+# NeoSolarized Light
+
+[colors]
+background = "#fcf4dc"
+foreground = "#002b36"
+
+cursor_bg = "#708183"
+
+selection_bg = "#52676f"
+selection_fg = "#001e26"
+
+[colors.tab_bar]
+background = "#073642"
+
+[colors.tab_bar.active_tab]
+fg_color = "#181926"
+bg_color = "#cad3f5"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#586e75"
+bg_color = "#cad3f5"
+
+ansi = [ "#002b36", "#dc322f", "#859900", "#b58900", "#268bd2", "#d33682", "#2aa198", "#e9e2cb" ]
+brights = [ "#001e26", "#cb4b16", "#465a61", "#52676f", "#708183", "#6c71c4", "#81908f", "#fcf4dc" ]
+
+[metadata]
+name = 'NeoSolarized Light'

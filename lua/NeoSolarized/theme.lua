@@ -299,7 +299,7 @@ function M.setup()
     diffIndexLine                            = { fg = c.purple },
     -- Neogit
     NeogitBranch                             = { fg = c.purple },
-    NeogitRemote                             = { fg = c.voilet },
+    NeogitRemote                             = { fg = c.violet },
     NeogitHunkHeader                         = { fg = c.fg0 },
     NeogitHunkHeaderHighlight                = { fg = c.blue },
     NeogitDiffContextHighlight               = { fg = c.fg2 },
@@ -542,7 +542,7 @@ function M.setup()
     LightspeedLabel                          = { fg = c.red, bg = c.none, bold = true, underline = true },
     LightspeedLabelDistant                   = { fg = c.blue, bg = c.none, bold = true, underline = true },
     LightspeedLabelDistantOverlapped         = { fg = c.bg_green, underline = true },
-    LightspeedLabelOverlapped                = { fg = c.voilet, underline = true },
+    LightspeedLabelOverlapped                = { fg = c.violet, underline = true },
     LightspeedMaskedChar                     = { fg = c.purple },
     LightspeedOneCharMatch                   = { bg = c.purple, fg = c.fg0, bold = true },
     LightspeedPendingOpArea                  = { bg = c.green, fg = c.bg0 },

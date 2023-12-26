@@ -2,7 +2,7 @@
 
 A dark and light Neovim theme written in Lua ported from 
 [NeoSolarized](https://github.com/overcache/NeoSolarized) with better syntax highlighting. Includes
-extra themes for Kitty, Alacritty and Konsole.
+extra themes for Kitty, Alacritty, Wezterm, Konsole and Windows Terminal.
 
 ## Dark (Dark Theme with Transparency)
 ![Screenshot_20230430_084417](https://user-images.githubusercontent.com/70003855/235333907-c064208a-3975-404d-874b-58e5c52ee5f0.png)

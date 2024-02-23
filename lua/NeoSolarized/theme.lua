@@ -17,7 +17,7 @@ function M.setup()
     CurSearch                                = { link = "IncSearch" },
     CurrentWord                              = { fg = c.bg0, bg = c.bg_green },
     Cursor                                   = { fg = c.bg1, bg = c.fg0 },                      -- character under the cursor
-    CursorColumn                             = { bg = c.none },                                 -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorColumn                             = { link = "CursorLine" },                         -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorIM                                 = { fg = c.bg0, bg = c.fg0 },                      -- like Cursor, but used when in IME mode |CursorIM|
     CursorLine                               = { bg = options.transparent and c.bg0 or c.bg1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr                             = { fg = c.base2 },                                -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.

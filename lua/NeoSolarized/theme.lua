@@ -24,7 +24,7 @@ function M.setup()
     DiffAdd                                  = { bg = c.diff_add },                             -- diff mode: Added line |diff.txt|
     DiffChange                               = { bg = c.diff_change },                          -- diff mode: Changed line |diff.txt|
     DiffDelete                               = { bg = c.diff_delete },                          -- diff mode: Deleted line |diff.txt|
-    DiffText                                 = { bg = c.bg1 },                                  -- diff mode: Changed text within a changed line |diff.txt|
+    DiffText                                 = { bg = c.diff_text },                            -- diff mode: Changed text within a changed line |diff.txt|
     Directory                                = { fg = c.blue },                                 -- directory names (and other special names in listings)
     EndOfBuffer                              = { fg = c.bg1 },                                  -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg                                 = { fg = c.red },                                  -- error messages on the command line

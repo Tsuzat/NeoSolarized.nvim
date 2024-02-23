@@ -1,6 +1,6 @@
 local M = {}
 
--- @class Dark Color Pallette
+-- @class Dark Color Palette
 M.dark = {
   bg0         = '#002b36',
   bg1         = '#073642',
@@ -25,10 +25,11 @@ M.dark = {
   diff_add    = '#003200',
   diff_change = '#323200',
   diff_delete = '#320000',
+  diff_text   = '#404000',
   none        = "NONE"
 }
 
--- @class Light Color Pallette
+-- @class Light Color Palette
 M.light = {
   bg0         = '#fdf6e3',
   bg1         = '#eee8d5',
@@ -50,9 +51,10 @@ M.light = {
   bg_red      = '#da0000',
   bg_green    = '#859000',
   bg_yellow   = '#b59900',
-  diff_add    = '#003200',
-  diff_change = '#323200',
-  diff_delete = '#320000',
+  diff_add    = '#caffca',
+  diff_change = '#ffffca',
+  diff_delete = '#ffcaca',
+  diff_text   = '#e8e8b3',
   none        = "NONE"
 }
 

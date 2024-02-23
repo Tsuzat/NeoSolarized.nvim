@@ -22,7 +22,7 @@ function M.setup()
     CursorLine                               = { bg = options.transparent and c.bg0 or c.bg1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr                             = { fg = c.base2 },                                -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     DiffAdd                                  = { bg = c.diff_add },                             -- diff mode: Added line |diff.txt|
-    DiffChange                               = { bg = c.diff_yellow },                          -- diff mode: Changed line |diff.txt|
+    DiffChange                               = { bg = c.diff_change },                          -- diff mode: Changed line |diff.txt|
     DiffDelete                               = { bg = c.diff_delete },                          -- diff mode: Deleted line |diff.txt|
     DiffText                                 = { bg = c.bg1 },                                  -- diff mode: Changed text within a changed line |diff.txt|
     Directory                                = { fg = c.blue },                                 -- directory names (and other special names in listings)

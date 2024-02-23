@@ -11,7 +11,7 @@ function M.setup()
   local c = theme.colors
 
   theme.highlights = {
-    ColorColumn                              = { bg = c.blue },                                 -- used for the columns set with 'colorcolumn'
+    ColorColumn                              = { bg = c.bg1 },                                  -- used for the columns set with 'colorcolumn'
     Comment                                  = { fg = c.fg2, style = options.styles.comments }, -- any comment
     Conceal                                  = { fg = c.bg1 },                                  -- placeholder characters substituted for concealed text (see 'conceallevel')
     CurSearch                                = { link = "IncSearch" },

@@ -11,20 +11,20 @@ function M.setup()
   local c = theme.colors
 
   theme.highlights = {
-    ColorColumn                              = { bg = c.blue },                                 -- used for the columns set with 'colorcolumn'
+    ColorColumn                              = { bg = c.bg1 },                                  -- used for the columns set with 'colorcolumn'
     Comment                                  = { fg = c.fg2, style = options.styles.comments }, -- any comment
     Conceal                                  = { fg = c.bg1 },                                  -- placeholder characters substituted for concealed text (see 'conceallevel')
     CurSearch                                = { link = "IncSearch" },
     CurrentWord                              = { fg = c.bg0, bg = c.bg_green },
     Cursor                                   = { fg = c.bg1, bg = c.fg0 },                      -- character under the cursor
-    CursorColumn                             = { bg = c.none },                                 -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorColumn                             = { link = "CursorLine" },                         -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorIM                                 = { fg = c.bg0, bg = c.fg0 },                      -- like Cursor, but used when in IME mode |CursorIM|
     CursorLine                               = { bg = options.transparent and c.bg0 or c.bg1 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     CursorLineNr                             = { fg = c.base2 },                                -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     DiffAdd                                  = { bg = c.diff_add },                             -- diff mode: Added line |diff.txt|
-    DiffChange                               = { bg = c.diff_yellow },                          -- diff mode: Changed line |diff.txt|
+    DiffChange                               = { bg = c.diff_change },                          -- diff mode: Changed line |diff.txt|
     DiffDelete                               = { bg = c.diff_delete },                          -- diff mode: Deleted line |diff.txt|
-    DiffText                                 = { bg = c.bg1 },                                  -- diff mode: Changed text within a changed line |diff.txt|
+    DiffText                                 = { bg = c.diff_text },                            -- diff mode: Changed text within a changed line |diff.txt|
     Directory                                = { fg = c.blue },                                 -- directory names (and other special names in listings)
     EndOfBuffer                              = { fg = c.bg1 },                                  -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg                                 = { fg = c.red },                                  -- error messages on the command line

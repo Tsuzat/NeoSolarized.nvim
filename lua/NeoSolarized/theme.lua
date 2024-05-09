@@ -348,7 +348,7 @@ function M.setup()
     -- Telescope
     TelescopeMatching                        = { fg = c.green, bold = true },
     TelescopeBorder                          = { fg = c.base1, bg = options.transparent and c.none or c.bg0 },
-    TelescopeNormal                          = { fg = c.fg0, bg = options.transparent and c.none or c.bg1 },
+    TelescopeNormal                          = { fg = c.fg0, bg = options.transparent and c.none or c.bg0 },
     TelescopePromptPrefix                    = { fg = c.orange },
     TelescopeSelection                       = { link = "diffAdded" },
     -- NvimTree

@@ -186,6 +186,10 @@ M.defaults = {
     default = true,
     link = "Keyword",
   },
+  ["@keyword.conditional"] = {
+    default = true,
+    link = "Conditional",
+  },
   ["@keyword.function"] = {
     default = true,
     link = "Keyword",

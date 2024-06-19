@@ -93,7 +93,7 @@ function M.setup()
     Identifier                               = { fg = c.blue, style = options.styles.variables },   -- (preferred) any variable name
     Function                                 = { fg = c.yellow, style = options.styles.functions }, -- function name (also: methods for classes)
     Statement                                = { fg = c.red, italic = options.enable_italics },     -- (preferred) any statement
-    Conditional                              = { fg = c.red, italic = options.enable_italics },     --  if, then, else, endif, switch, etc.
+    Conditional                              = { fg = c.aqua, italic = options.enable_italics },    --  if, then, else, endif, switch, etc.
     Repeat                                   = { fg = c.red, italic = options.enable_italics },     --   for, do, while, etc.
     Label                                    = { fg = c.orange },                                   --    case, default, etc.
     Operator                                 = { fg = c.orange },                                   -- "sizeof", "+", "*", etc.
@@ -108,7 +108,7 @@ function M.setup()
     StorageClass                             = { fg = c.orange },                                   -- static, register, volatile, etc.
     Structure                                = { fg = c.orange },                                   --  struct, union, enum, etc.
     Typedef                                  = { fg = c.red, italic = options.enable_italics },     --  A typedef
-    Special                                  = { fg = c.yellow },                                   -- (preferred) any special symbol
+    Special                                  = { fg = c.purple },                                   -- (preferred) any special symbol
     SpecialChar                              = { fg = c.yellow },                                   --  special character in a constant
     Tag                                      = { fg = c.orange },                                   --    you can use CTRL-] on this
     Delimiter                                = { fg = c.fg0 },                                      --  character that needs attention
@@ -198,7 +198,7 @@ function M.setup()
     TSBoolean                                = { fg = c.purple },
     TSCharacter                              = { fg = c.aqua },
     TSComment                                = { link = "Comment" },
-    TSConditional                            = { fg = c.red },
+    TSConditional                            = { link = "Conditional" },
     TSConstBuiltin                           = { fg = c.blue, italic = true },
     TSConstMacro                             = { fg = c.blue, italic = true },
     TSConstant                               = { fg = c.fg0 },
@@ -258,10 +258,11 @@ function M.setup()
     ["@lsp.type.enumMember"]                 = { link = "TSConstructor" },
     ["@lsp.type.interface"]                  = { fg = c.blue },
     ["@lsp.type.keyword"]                    = { link = "TSKeyword" },
+    ["@lsp.type.modifier"]                   = { fg = c.red },
     ["@lsp.type.namespace"]                  = { link = "TSNameSpace" },
     ["@lsp.type.parameter"]                  = { link = "TSParameter" },
     ["@lsp.type.property"]                   = { link = "TSProperty" },
-    ["@lsp.type.variable"]                   = {}, -- use treesitter styles for regular variables
+    ["@lsp.type.variable"]                   = { fg = c.fg0 },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "TSFuncBuiltin" },
     ["@lsp.typemod.macro.defaultLibrary"]    = { link = "TSFuncBuiltin" },
     ["@lsp.typemod.method.defaultLibrary"]   = { link = "TSFuncBuiltin" },
@@ -486,7 +487,7 @@ function M.setup()
     DiagnosticHintBorder                     = { link = 'SagaBorder' },
     DiagnosticInfoBorder                     = { link = 'SagaBorder' },
     DiagnosticPos                            = { fg = c.fg2 },
-    DiagnosticWord                           = { fg = c.fg },
+    DiagnosticWord                           = { fg = c.fg0 },
     -- Call Hierachry
     CallHierarchyNormal                      = { link = 'SagaBorder' },
     CallHierarchyBorder                      = { link = 'SagaBorder' },
@@ -585,8 +586,8 @@ function M.setup()
     CmpItemKindTypeParameter                 = { fg = c.yellow },
     NavicIconsFile                           = { fg = c.fg0 },
     NavicIconsModule                         = { fg = c.yellow },
-    NavicIconsNamespace                      = { fg = c.fg },
-    NavicIconsPackage                        = { fg = c.fg },
+    NavicIconsNamespace                      = { fg = c.fg0 },
+    NavicIconsPackage                        = { fg = c.fg0 },
     NavicIconsClass                          = { fg = c.orange },
     NavicIconsMethod                         = { fg = c.blue },
     NavicIconsProperty                       = { fg = c.green },
@@ -613,7 +614,7 @@ function M.setup()
     NavicText                                = { fg = c.fg0 },
     NavicSeparator                           = { fg = c.fg0 },
     -- Indent Blank Line
-    IblIndent                                = { fg = options.transparent and c.bg0 or c.fg2, bg = c.none },
+    IblIndent                                = { fg = options.transparent and c.bg1 or c.fg2, bg = c.none },
     IblScope                                 = { fg = c.text, bg = c.none },
     RainbowRed                               = { blend = 0, fg = c.red },
     RainbowYellow                            = { blend = 0, fg = c.yellow },
@@ -868,6 +869,7 @@ function M.setup()
     javaVarArg                                = { fg = c.green },
     javaAnnotation                            = { fg = c.blue },
     javaUserLabel                             = { fg = c.purple },
+    javaContant                               = { fg = c.violet },
     javaTypedef                               = { fg = c.aqua },
     javaParen                                 = { fg = c.fg0 },
     javaParen1                                = { fg = c.fg0 },
